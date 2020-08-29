@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy, SimpleChanges } from '@angular/core';
 import {ResizableLayoutEnum} from '../enums/app-enum'
 
 @Component({
@@ -21,8 +21,6 @@ export class AppResizableComponent implements OnInit {
 
     public sGridRowTemplate: string;
 
-    public sCSSClassName: string;
-
     //Transformed position
     private nTransformedPosition: number;
     //Minimum transform allowed
@@ -31,16 +29,28 @@ export class AppResizableComponent implements OnInit {
     private nMaxTransformAllowed: number;
 
     private oSplitterPosition: any = {
-      nInitialPosition: 400,
-      nMaxPosition: 700,
-      nMinPosition: 300
+      nInitialPosition: 200,
+      nMaxPosition: 400,
+      nMinPosition: 100
     }
 
     public ngOnInit(): void {
+      this.fnInitialiseVariables();
       this.nTransformedPosition = this.oSplitterPosition.nInitialPosition;
       this.fnSetMinAndMaxTranformationAllowed();
       this.fnSetGridPosition();
       this.fnSetLayout()
+    }
+
+    public ngOnChanges(simpleChanges: SimpleChanges): void {
+      if(!!simpleChanges && simpleChanges.eLayout.isFirstChange() === false){
+        this.fnInitialiseVariables();
+      this.nTransformedPosition = this.oSplitterPosition.nInitialPosition;
+      this.fnSetMinAndMaxTranformationAllowed();
+      this.fnSetGridPosition();
+      this.fnSetLayout()
+      }
+
     }
 
 
@@ -139,6 +149,18 @@ export class AppResizableComponent implements OnInit {
             event.source._dragRef._activeTransform.x = nTransformAllowed;
         else
             event.source._dragRef._activeTransform.y = nTransformAllowed;
+    }
+
+    private fnInitialiseVariables(): void {
+      this.sAxis = '';
+      this.sLayoutClass = '';
+      this.sGridColumnTemplate = '';
+      this.sGridRowTemplate = '';
+      this.sSplitterType = '';
+      this.nMaxTransformAllowed = 0;
+      this.nTransformedPosition = 0;
+      this.nMinTransformAllowed = 0
+
     }
 
 }

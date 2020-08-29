@@ -1,13 +1,13 @@
   :host {
     display:grid;
-    grid-template-rows: min-content 1fr;
-    height: 500px;
+    grid-template-rows: min-content min-content 1fr;
+    height: 600px;
     overflow: hidden;
   }
 
   .content {
+    display: grid;
     grid-area: content2;
-    height: 100%;
     padding: 10px;
   }
 

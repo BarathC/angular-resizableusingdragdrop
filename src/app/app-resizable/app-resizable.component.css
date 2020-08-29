@@ -34,7 +34,7 @@
 }
 
 .im-tm-tl-element{
-    display: block;
+    display: grid;
     grid-area: element;
     padding: 10px;
 }

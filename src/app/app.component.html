@@ -1,10 +1,19 @@
-  <mat-toolbar>
-    <span>Resizable element using CDK drag drop</span>
-  </mat-toolbar>
+<mat-toolbar>
+	<span>Resizable element using CDK drag drop</span>
+
+</mat-toolbar>
+	<mat-form-field appearance="fill">
+		<mat-label>Select Layout</mat-label>
+		<mat-select [(ngModel)]="eLayout">
+			<mat-option *ngFor="let oOption of selectOptions" [value]="oOption.id">
+				{{oOption.value}}
+			</mat-option>
+		</mat-select>
+	</mat-form-field>
 <div [class]='eLayout'>
 	<app-app-resizable [eLayout]='eLayout' class='resizablecontent'></app-app-resizable>
 	<div class='content'>
-		<mat-card style='height:100%;'>
+		<mat-card>
 			<mat-card-header>
 				<mat-card-title>Sikkim</mat-card-title>
 			</mat-card-header>
