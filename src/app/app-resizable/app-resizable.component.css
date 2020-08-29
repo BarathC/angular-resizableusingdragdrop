@@ -1,0 +1,67 @@
+
+.dockLeft{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "splitter element";
+}
+
+.dockRight{
+   height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "element splitter";
+}
+
+.dockTop{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "splitter"
+    "element";
+}
+
+.dockBottom{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+    "element"
+    "splitter";
+}
+
+.im-tm-tl-element{
+    display: block;
+    grid-area: element;
+    padding: 10px;
+}
+
+.im-tm-tl-verticalsplitter {
+    grid-area: splitter;
+     background: red;
+    transform: translate3d(0, 0, 0) !important;
+    width: 2px;
+    height: 100%;
+    cursor: col-resize;
+    justify-self: center;
+}
+.im-tm-tl-verticalsplitter:hover{
+  width: 4px
+}
+
+.im-tm-tl-horizontalsplitter {
+   grid-area: splitter;
+     background: red;
+    transform: translate3d(0, 0, 0) !important;
+    height: 2px;
+    cursor: row-resize;
+    justify-self: center;
+    width: 100%;
+}
+
+.im-tm-tl-horizontalsplitter:hover {
+  height: 4px;
+}
