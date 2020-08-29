@@ -5,7 +5,7 @@
 	<mat-form-field appearance="fill">
 		<mat-label>Select Layout</mat-label>
 		<mat-select [(ngModel)]="eLayout">
-			<mat-option *ngFor="let oOption of selectOptions" [value]="oOption.id">
+			<mat-option *ngFor="let oOption of selectOptions" [disabled]='!oOption.enable' [value]="oOption.id">
 				{{oOption.value}}
 			</mat-option>
 		</mat-select>
