@@ -41,7 +41,7 @@
 
 .im-tm-tl-verticalsplitter {
     grid-area: splitter;
-     background: red;
+     background: purple;
     transform: translate3d(0, 0, 0) !important;
     width: 2px;
     height: 100%;
@@ -54,7 +54,7 @@
 
 .im-tm-tl-horizontalsplitter {
    grid-area: splitter;
-     background: red;
+     background: purple;
     transform: translate3d(0, 0, 0) !important;
     height: 2px;
     cursor: row-resize;

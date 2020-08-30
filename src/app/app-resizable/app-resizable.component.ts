@@ -31,7 +31,7 @@ export class AppResizableComponent implements OnInit {
     private oSplitterPosition: any = {
       nInitialPosition: 200,
       nMaxPosition: 400,
-      nMinPosition: 100
+      nMinPosition: 150
     }
 
     public ngOnInit(): void {
