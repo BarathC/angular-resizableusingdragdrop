@@ -33,13 +33,13 @@
     "splitter";
 }
 
-.im-tm-tl-element{
+.element{
     display: grid;
     grid-area: element;
     padding: 10px;
 }
 
-.im-tm-tl-verticalsplitter {
+.verticalsplitter {
     grid-area: splitter;
      background: purple;
     transform: translate3d(0, 0, 0) !important;
@@ -48,11 +48,11 @@
     cursor: col-resize;
     justify-self: center;
 }
-.im-tm-tl-verticalsplitter:hover{
+.verticalsplitter:hover{
   width: 4px
 }
 
-.im-tm-tl-horizontalsplitter {
+.horizontalsplitter {
    grid-area: splitter;
      background: purple;
     transform: translate3d(0, 0, 0) !important;
@@ -62,6 +62,6 @@
     width: 100%;
 }
 
-.im-tm-tl-horizontalsplitter:hover {
+.horizontalsplitter:hover {
   height: 4px;
 }

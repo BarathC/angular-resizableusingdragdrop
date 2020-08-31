@@ -118,22 +118,22 @@ export class AppResizableComponent implements OnInit {
         switch (this.eLayout) {
             case ResizableLayoutEnum.Left:
                 this.sLayoutClass = 'dockLeft';
-                this.sSplitterType = 'im-tm-tl-verticalsplitter';
+                this.sSplitterType = 'verticalsplitter';
                 this.sAxis = 'x';
                 break;
             case ResizableLayoutEnum.Right:
                 this.sLayoutClass = 'dockRight';
-                this.sSplitterType = 'im-tm-tl-verticalsplitter';
+                this.sSplitterType = 'verticalsplitter';
                 this.sAxis = 'x';
                 break;
             case ResizableLayoutEnum.Top:
                 this.sLayoutClass = 'dockTop';
-                this.sSplitterType = 'im-tm-tl-horizontalsplitter';
+                this.sSplitterType = 'horizontalsplitter';
                 this.sAxis = 'y';
                 break;
             case ResizableLayoutEnum.Bottom:
                 this.sLayoutClass = 'dockBottom';
-                this.sSplitterType = 'im-tm-tl-horizontalsplitter';
+                this.sSplitterType = 'horizontalsplitter';
                 this.sAxis = 'y';
                 break;
             default:
